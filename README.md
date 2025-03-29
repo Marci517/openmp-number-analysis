@@ -24,6 +24,14 @@ A number is called deficient if the sum of its proper divisors is less than the 
 
 ## Build and Run
 
-```bash
+You can compile the program with or without optimization:
+
+### With optimization (recommended for performance testing)
 gcc -fopenmp -O2 source.c -o openmp-demo
-./openmp-demo 1000000 4
+
+### Or without optimization (easier for debugging, but slower)
+gcc -fopenmp source.c -o openmp-demo
+
+### Run the program (regardless of how it was compiled)
+./openmp-demo <number_of_elements> <number_of_threads>
+
